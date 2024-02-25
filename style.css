@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Raleway:wght@400;700&display=swap");
+
+/* - Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%) */
+
+body {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(./images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100% 55%;
+  background-position: bottom center;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+}
+.fylo__folder {
+  padding: 40px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 15px 100px 15px 15px;
+  height: 200px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.fylo-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.fylo-icons img {
+  background: hsl(229, 57%, 11%);
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+p {
+  color: hsla(243, 100%, 93%, 0.5);
+  text-align: left;
+}
+p span {
+  font-weight: 700;
+  color: white;
+}
+.storage-capacity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 45px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 15px;
+  height: 150px;
+  width: 540px;
+  position: relative;
+}
+
+/* --------------------------------- */
+.progress-bar {
+  background: hsl(229, 57%, 11%);
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+.progress-bar div {
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+}
+.progress-bar div span {
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  float: right;
+}
+
+.left-gb {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  color: hsla(243, 100%, 93%, 0.5);
+  width: 100%;
+}
+.remaining-gb {
+  border-radius: 15px 15px 0 15px;
+  padding: 0.5rem 0.4rem;
+  background: white;
+  color: black;
+  width: 180px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  position: absolute;
+  top: -3rem;
+  right: 40px;
+}
+
+.remaining-gb span {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.remaining-gb .gb {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.triangle-1 {
+  /* background-color: brown; */
+  /* height: 20px;
+  width: 20px; */
+  border: 10px solid transparent;
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 18%;
+  right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+  .fylo__folder {
+    width: 100%;
+  }
+
+  .remaining-gb {
+    position: absolute;
+    left: 30%;
+    border-radius: 15px;
+    top: 80%;
+  }
+  .triangle-1 {
+    display: none;
+  }
+}
